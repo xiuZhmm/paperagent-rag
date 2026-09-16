@@ -1,0 +1,5 @@
+Synthetic engineering fixture. This is not a real company's policy and is not benchmark data.
+
+Refund processing uses an idempotency key. When a client repeats the same refund request, the service returns the original result rather than creating a second refund. The key is stored together with the order identifier and final status.
+
+Network timeouts do not prove that a refund failed. Query the request status before attempting a retry. A refund should not be issued solely because a language model suggested it.

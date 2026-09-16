@@ -1,0 +1,5 @@
+-r requirements-workbench.txt
+faiss-cpu>=1.8,<2
+langchain-openai>=1,<2
+langchain-text-splitters>=1,<2
+python-dotenv>=1,<2

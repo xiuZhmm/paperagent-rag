@@ -1,0 +1,72 @@
+{
+  "created_utc": "2026-09-12T08:37:07.167905+00:00",
+  "dataset": "BEIR SciFact",
+  "corpus_count": 5183,
+  "dev_count": 200,
+  "test_count": 300,
+  "excluded_train_duplicate_query_ids": [
+    "871",
+    "1291"
+  ],
+  "model": "sentence-transformers/all-MiniLM-L6-v2",
+  "dense_weight": 0.5,
+  "rrf_constant": 60,
+  "candidate_pool_per_branch": 100,
+  "tokenizer_truncation": {
+    "max_length": 128,
+    "stride": 0,
+    "strategy": "longest_first",
+    "direction": "right"
+  },
+  "cpu_threads": 4,
+  "python": "3.12.14",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "dependencies": {
+    "fastembed": "0.8.0",
+    "onnxruntime": "1.30.0",
+    "numpy": "2.5.3",
+    "tokenizers": "0.23.2"
+  },
+  "input_sha256": {
+    "corpus.jsonl": "dec31c8182f3d744c7d2c09423756fd1d17cbef75808db13ba01cc0aab4d1ac6",
+    "queries.jsonl": "8ff84a7c903f722981cd8d595c022660140c51867b27608a6d4910db86080313",
+    "qrels/train.tsv": "a53f2114831916c096b6c37d9e54da68cef4efdcdbd5ed46533601af972acf1d",
+    "qrels/test.tsv": "0864bb985e0ca2367ba217977e72004d549054b2b06666ed9d4825ac7c21284c"
+  },
+  "metrics": {
+    "bm25": {
+      "recall@10": 0.7849444444444444,
+      "recall@20": 0.8258888888888888,
+      "mrr@10": 0.6325026455026455,
+      "ndcg@10": 0.6644511502901209,
+      "ranking_p95_ms": 37.063305010087795
+    },
+    "dense": {
+      "recall@10": 0.7743333333333333,
+      "recall@20": 0.8280000000000001,
+      "mrr@10": 0.5783888888888888,
+      "ndcg@10": 0.6238596288000935,
+      "ranking_p95_ms": 43.53057499974966
+    },
+    "hybrid": {
+      "recall@10": 0.8255555555555555,
+      "recall@20": 0.8835555555555555,
+      "mrr@10": 0.6370634920634921,
+      "ndcg@10": 0.6793060972348618,
+      "ranking_p95_ms": 42.05273497791497
+    }
+  },
+  "hybrid_minus_dense_ndcg10": 0.05544646843476838,
+  "paired_bootstrap_95_interval": [
+    0.02530803871614571,
+    0.08496809237671489
+  ],
+  "hybrid_wins_ties_losses_vs_dense": [
+    92,
+    168,
+    40
+  ],
+  "warm_retrieval_p95_ms_20_queries": 121.55144501011819,
+  "elapsed_seconds_including_embedding": 371.5077948999824,
+  "scope": "English abstract retrieval only. No LLM generation, reranker, Chinese PDF accuracy or model training evaluated."
+}

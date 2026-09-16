@@ -1,0 +1,5 @@
+Synthetic engineering fixture. This document is provided only to test search and source filtering.
+
+BM25 ranks documents using lexical matches. Dense retrieval compares embeddings to find semantic similarity. Reciprocal rank fusion combines ranked lists using their ranks instead of treating their raw scores as comparable probabilities.
+
+知识库文档按页切分并保留文件名、物理页码和文本块标识。纯扫描PDF需要先进行OCR。本演示没有OCR功能。

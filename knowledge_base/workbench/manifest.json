@@ -1,0 +1,7 @@
+{
+  "version": 1,
+  "model": null,
+  "chunks": 3,
+  "chunk_size": 500,
+  "overlap": 100
+}

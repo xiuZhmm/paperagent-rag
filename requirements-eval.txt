@@ -1,0 +1,5 @@
+# CPU retrieval, no API key and no GPU required.
+fastembed==0.8.0
+numpy>=1.26,<3
+pypdf>=6,<7
+pytest>=8,<10
